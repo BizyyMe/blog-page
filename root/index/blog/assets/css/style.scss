@@ -1,0 +1,42 @@
+// 6 main colors
+
+// purple and orange
+$acc-color1: hsl(284.32, 57.51%, 37.84%);
+$acc-color2: hsl(0, 91.67%, 62.35%); //nuetral - black / white ;  text or bg
+$text-color: hsl(192, 38.46%, 94.9%);
+$bg-color: hsl(0, 0%, 0.78%); // green and blue
+$color-tone1: hsl(189.21, 75.9%, 48.82%);
+$color-tone2: hsl(112.04, 79.02%, 71.96%); // end of 6 main colors
+
+// border-colors
+// end of 3 border colors
+
+// default padding, margin, text, font
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
+    font-size: 1rem;
+}
+
+body {
+    background-color: $bg-color; 
+    font-size: 16px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 172px;
+}
+
+li {
+    width: 100%;
+    padding: 1%;
+}
