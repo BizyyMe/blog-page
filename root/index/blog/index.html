@@ -1,51 +1,95 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta charset="UTF-8">
     <meta name="viewport"
-        content="width=device-width, initial-scale=0.98, minimum-scale=0.75, maximum-scale=3.5, viewport-fit=cover" />
-    <title>responsive side navigation bar</title>
+        content="width=device-width, initial-scale=1.0, minimum-scale=0.75, maximum-scale=3.5, viewport-fit=contain" />
+
+    <title>Blog Home Page | DIBATTISTE, CHASEN</title>
+
+<!-- above is pre-title tags + title | below is preconnect links and important placement used to improve text load time -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" crossorigin="anonymous"/>
+
+
+<!-- link and misc tags | not preloaded -->
+
+
+    <link rel="stylesheet" href="/media/minty/32gb usb/public 07-18-24/index/blog/assets/css/styles.css" type="text/css" refferpolicy="origin-when-cross-origin" />
+
+    <link rel="stylesheet" href="/media/minty/32gb usb/public 07-18-24/index/blog/assets/css/blog-page.css" type="text/css" refferpolicy="origin-when-cross-origin" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- main meta tags; name, property | i.e. essentials -->
+
     <meta name="keywords" content="" />
     <meta name="author" content="Chasen DiBattiste" />
     <meta name="robots" content="index, follow" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="description" content="description" />
-    <link rel="stylesheet" href="css/style.css">
 
+<!-- og: ( open graph ) tags for twitter / facebook / socials -->
+
+
+
+<!-- Script tags | .js , etc -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js" integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- | ^^ handles touch response for mobile / tablet |
+     | below - axios pkg ; handles http requests | -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
 <body>
-    <main>
 
+<!-- Header | navbar, name, c2a button -->
         <header>
-
-            <nav class="sidebar">
-
+            <nav class="navbar">
+                <h2>Bizyybeinme</h2>
                 <ul>
-
-                    <a href="index.html">
-                        <li>Home</li>
-                    </a>
-                    <a href="blog.html">
-                        <li>Blog</li>
-                    </a>
-                    <a href="https://chasenme.wixstudio.io/home/aboutme">
-                        <li>About</li>
-                    </a>
-                    <a href="https://chasenme.wixstudio.io/data">
-                        <li>Data</li>
-                    </a>
-
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blogpage.html">Blog</a></li>
+                    <li><a href="https://chasenme.wixstudio.io/home">Showcase</a></li>
+                    <li><a href="https://chasenme.wixstudio.io/home/aboutme">About</a></li>
+                    <li><a href="https://chasenme.wixstudio.io/data">Data</a></li>
                 </ul>
-
+                <button class="hire-btn" alt="click to action button in header, hire-me action.">Hire Me</button>
             </nav>
-
         </header>
+<!-- End of Header -->
 
-    </main>
-</body>
 
+<!-- Main Content | No Header / Footer -->
+        <main>
+
+         <section class="main">
+             
+         </section>
+
+        </main>
+<!-- End of Main -->
+
+<!-- Footer | nav links, social bar, brand name -->
+        <footer>
+          <nav class="navlinks">
+            <ul class="ul-links">
+              <li><a href="mailto:hi@bizyy.co">Contact</a></li>
+              <li><a href="https://chasenme.wixstudio.io/home/aboutme">About</a></li>
+              <li><a href="https://chasenme.wixstudio.io/home/discaimer-policy">End-User</a></li>
+              <li><a href="https://chasenme.wixstudio.io/home/privacy-policy">Privacy</a></li>
+            </ul>
+          </nav>
+    </footer>
+<!-- End of Page Content in Document -->
+  </body>
+<!-- Closing last 2 tags | body & html -->
 </html>
