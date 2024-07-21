@@ -1,0 +1,181 @@
+@import url(/media/minty/32gb usb/public 07-18-24/index/blog/assets/css/styles.css);
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.login-wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.login-box {
+	z-index: 1;
+	position: relative;
+}
+
+.container {
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%); /* Center the container relative to the login box */
+  	width: 400px; /* Match the login box width */
+  	height: 400px; /* Match the login box width */
+}
+
+.container span {
+	position: absolute;
+	left: 0;
+	width: 32px;
+	height: 6px;
+	background: var(--text-color);
+	border-radius: 8px;
+	transform-origin: center;
+	transform: rotate(calc(var(--i) * 360deg)) scale(2.2);
+	animation: animate 5s linear infinite; /* Adjust duration */
+    animation-delay: calc(var(--i) * (5s / 100)); /* Adjust delay, assuming 100 spans */
+}
+
+.login-box span { 
+  position: absolute;
+  left: calc(50% - 2px); /* Center horizontally but offset by half the span's width */
+  top: -3px; /* Position above the login box, adjust based on your line thickness */
+  transform-origin: left center; /* Rotate around the left edge of the span */
+  transform: rotate(calc(var(--i) * 3.6deg)) scaleX(20); /* Stretch the span to create a circle */
+  width: 6px; /* Make the span thinner for a semi-thin line */
+  height: 6px;
+  background-color: var(--text-color);
+  border-radius: 8px;
+  animation: animate 5s linear infinite;
+  animation-delay: calc(var(--i) * 0.1s); 
+}
+
+@keyframes animate {
+  0% {
+    background: var(--text-accent);
+  }
+  25% {
+    background: var(--acc-tone1);
+  }
+  50% {
+    background: var(--acc-tone2);
+  }
+  75% {
+    background: var(--acc-tone3);
+  }
+  100% {
+    background: var(--text-accent); /* Ensure the loop is smooth */
+  }
+}
+
+.login-box form {
+	width: 100%;
+	padding: 0 50px;
+}
+
+h2 {
+	font-size: 2em;
+	color: var(--text-color);
+	text-align: center;
+}
+
+.input-box {
+	position: relative;
+	margin: 25px 0;
+}
+
+.input-box input {
+	width: 100%;
+	height: 50px;
+	background: transparent;
+	border: 2px solid grey; 
+	outline: none;
+	border-radius: 40px;
+	font-size: 1em;
+	color: var(--text-accent);
+	padding: 0 20px;
+	transition: .5s ease;
+	box-sizing: border-box; /* This includes padding and border in the element's total width and height */
+}
+
+.input-box label {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	transform: translateY(-50%);
+	font-size: 1em;
+	color: var(--text-color);
+	pointer-events: none;
+	transition: .3s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: 6px; /* Adjusted value */
+  font-size: .8em;
+  padding: 0 6px;
+  color: var(--text-accent);
+}
+
+.input-box input:focus,
+.input-box input:valid {
+  border-color: var(--text-accent);
+  /* background: var(--bg-color); */ /* Removed from input */
+}
+
+.input-box:has(input:focus), /* Select input-box when its input is focused */
+.input-box:has(input:valid) { /* Select input-box when its input is valid */
+  background-color: var(--bg-color); /* Applied to the input-box */
+}
+
+
+.forgot-pass {
+	margin: -15px 0 10px;
+	text-align: center;
+}
+
+.forgot-pass a {
+	font-size: .85em;
+	color: var(--text-accent);
+	text-decoration: none;
+}
+
+.forgot-pass a:hover {
+	text-decoration: none;
+}
+
+.btn {
+	width: 100%;
+	height: 45px;
+	background: var(--text-color);
+	border: none;
+	outline: none;
+	border-radius: 40px;
+	cursor: pointer;
+	font-size: 1em;
+	color: #000;
+	font-weight: var(--weight-header);
+}
+
+.signup-login {
+	margin: 20px 0 10px;
+	text-align: center;
+}
+
+.signup-login a {
+	font-size: 1rem;
+	color: var(--text-color);
+	text-decoration: none;
+	font-weight: var(--weight-header);
+}
